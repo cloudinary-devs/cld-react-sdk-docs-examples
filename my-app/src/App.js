@@ -25,10 +25,10 @@ function App() {
         <AdvancedImage cldImg={Transformations()} />  
 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#plugins" target="_blank" rel="noopener noreferrer">Plugins</a>
-        <AdvancedImage cldImg={Quickstart()} plugins={[lazyload(), responsive(), accessibility(), placeholder()]} />
+        <AdvancedImage cldImg={AssetInstance()} plugins={[lazyload(), responsive(), accessibility(), placeholder()]} />
 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#lazy_loading" target="_blank" rel="noopener noreferrer">Lazy loading</a>
-        <AdvancedImage cldImg={Quickstart()} plugins={[lazyload('10px 20px 10px 30px', 0.25)]}/>
+        <AdvancedImage cldImg={AssetInstance()} plugins={[lazyload('10px 20px 10px 30px', 0.25)]}/>
 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#responsive_images" target="_blank" rel="noopener noreferrer">Responsive images</a>
         <AdvancedImage cldImg={AssetInstance()} plugins={[responsive([800, 1000, 1400])]} />
@@ -37,10 +37,10 @@ function App() {
        <AdvancedImage cldImg={AssetInstance()} plugins={[accessibility('colorblind')]}/>
 
        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#image_placeholders" target="_blank" rel="noopener noreferrer">Image placeholders</a>
-       <AdvancedImage cldImg={Quickstart()} plugins={[placeholder('blur')]}/>
+       <AdvancedImage cldImg={AssetInstance()} plugins={[placeholder('blur')]}/>
 
        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#example_2_combine_lazy_loading_with_a_placeholder" target="_blank" rel="noopener noreferrer">Lazy load and placeholder</a>
-       <AdvancedImage cldImg={Quickstart()} plugins={[lazyload(), placeholder('predominant-color')]}/>
+       <AdvancedImage cldImg={AssetInstance()} plugins={[lazyload(), placeholder('predominant-color')]}/>
   
       </header>
     </div>
