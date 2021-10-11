@@ -8,7 +8,6 @@ import {sepia} from "@cloudinary/url-gen/actions/effect";
 import {source} from "@cloudinary/url-gen/actions/overlay";
 import {opacity,brightness} from "@cloudinary/url-gen/actions/adjust";
 import {byAngle} from "@cloudinary/url-gen/actions/rotate"
-import {format} from "@cloudinary/url-gen/actions/delivery";
 
 // Import required qualifiers.
 import {image} from "@cloudinary/url-gen/qualifiers/source";
@@ -42,8 +41,8 @@ export function FullExample() {
     )
     .position(new Position().gravity(compass('south_east')).offsetX(5).offsetY(5))   // Position the logo.
   )
-  .rotate(byAngle(10))  // Rotate the result.
-  .delivery(format('png'));   // Deliver as PNG. */
+  .rotate(byAngle(10))  // Rotate the result. 
+  .format('png'); // Deliver as PNG. */
 
   return myImage;
 }
