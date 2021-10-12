@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# cld-react-docs-examples
+React examples for the [Cloudinary React SDK docs](https://cloudinary.com/documentation/react2_integration.)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
