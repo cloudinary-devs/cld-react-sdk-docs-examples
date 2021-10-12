@@ -14,7 +14,7 @@ import {image} from "@cloudinary/url-gen/qualifiers/source";
 import {Position} from "@cloudinary/url-gen/qualifiers/position";
 import {compass} from "@cloudinary/url-gen/qualifiers/gravity";
 
-export function FullExample() {
+export function getFullExampleImage() {
   
   // Create a Cloudinary instance and set your cloud name.
   const cld = new Cloudinary({

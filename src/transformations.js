@@ -5,7 +5,7 @@ import {Cloudinary} from "@cloudinary/url-gen";
 import {thumbnail} from "@cloudinary/url-gen/actions/resize";
 import {byRadius} from "@cloudinary/url-gen/actions/roundCorners";
 
-export function Transformations() {
+export function getTransformationsImage() {
 
   // Create and configure your Cloudinary instance.
   const cld = new Cloudinary({

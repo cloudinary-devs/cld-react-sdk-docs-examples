@@ -3,7 +3,7 @@ import URLConfig from "@cloudinary/url-gen/config/URLConfig";
 import CloudConfig from "@cloudinary/url-gen/config/CloudConfig";
 import {CloudinaryImage} from '@cloudinary/url-gen';
 
-export function AssetInstance() {
+export function getAssetInstanceImage() {
 
     // Set the Cloud configuration and URL configuration
     const cloudConfig = new CloudConfig({cloudName: 'demo'});

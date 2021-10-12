@@ -1,7 +1,7 @@
 import {Cloudinary} from "@cloudinary/url-gen";
 import {fill} from "@cloudinary/url-gen/actions/resize";
 
-export function Quickstart() {
+export function getQuickstartImage() {
 
   // Create a Cloudinary instance and set your cloud name.
   const cld = new Cloudinary({
