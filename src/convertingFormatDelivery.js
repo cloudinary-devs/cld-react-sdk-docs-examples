@@ -9,8 +9,8 @@ export function getConvertingFormatDeliveryImage() {
      }
    }); 
 
-   // Use the image with public ID, 'sample'.
-   const myImage = cld.image('sample');
+   // Use the image with public ID, 'docs/shoes'.
+   const myImage = cld.image('docs/shoes');
 
    // Set the format to GIF.
    myImage.format('gif');

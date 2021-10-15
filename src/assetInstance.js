@@ -10,7 +10,7 @@ export function getAssetInstanceImage() {
     const urlConfig = new URLConfig({secure: true});
 
     // Instantiate a new image passing the Cloud and URL configurations
-    const myImage = new CloudinaryImage('sample', cloudConfig, urlConfig);
+    const myImage = new CloudinaryImage('docs/shoes', cloudConfig, urlConfig);
 
     return myImage;
 }

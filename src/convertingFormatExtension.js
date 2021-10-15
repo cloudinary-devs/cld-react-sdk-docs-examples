@@ -8,8 +8,8 @@ export function getConvertingFormatExtensionImage() {
    }
  }); 
 
- // Use the image with public ID, 'sample', specifying the 'gif' extension.
- const myImage = cld.image('sample.gif');
+ // Use the image with public ID, 'docs/shoes', specifying the 'gif' extension.
+ const myImage = cld.image('docs/shoes.gif');
 
  return myImage;
 }

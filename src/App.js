@@ -17,75 +17,169 @@ import {getAutoFormatImage} from './autoFormat';
 import {getEffectsImage} from './effects';
 import {getOverlaysImage} from './overlays';
 import {getOptimizationsImage} from './imageOptimizations';
+import {getPluginsImage} from './plugins';
+import {getLazyloadImage} from './lazyload';
+import {getResponsiveImage} from './responsive';
+import {getAccessibilityImage} from './accessibility';
+import {getPlaceholderImage} from './placeholder';
+import {getLazyloadPlaceholderImage} from './lazyloadPlaceholder';
 
 function App() {
 
+  // This app has been structured to ensure that each example is self-contained, to show exactly what needs to be imported in each case. 
+  
+  // Therefore, whereas the docs may show the JavaScript in this location, and the AdvancedImage component directly referencing the image, for example:
+
+  // <AdvancedImage cldImg={myImage} />
+
+  // in this app we call a function to return myImage, for example:
+
+  // <AdvancedImage cldImg={getQuickstartImage()} />
+
+
   return (
     <div className="App">
-      <header className="App-header">
- 
-        <a className="App-link" href="https://cloudinary.com/documentation/react2_quick_start#2_add_cloudinary_to_your_code" target="_blank" rel="noopener noreferrer">Quickstart</a>
+      <header className="App-header"> 
+        Crop an image to a square, as shown in the <a className="App-link" href="https://cloudinary.com/documentation/react2_quick_start#2_add_cloudinary_to_your_code" target="_blank" rel="noopener noreferrer">Quickstart guide</a>
+        <div className="space"></div>
         <AdvancedImage cldImg={getQuickstartImage()} />
 
-        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#full_example" target="_blank" rel="noopener noreferrer">Full example</a>
+        <br/>
+
+        Apply a range of transformations, as shown in the <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#full_example" target="_blank" rel="noopener noreferrer">Full example</a>
+        <div className="space"></div>
         <AdvancedImage cldImg={getFullExampleImage()} />
 
-        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#asset_instance_configuration" target="_blank" rel="noopener noreferrer">Asset instance</a>
-        <AdvancedImage cldImg={getAssetInstanceImage()} />    
+        <br/>
 
-        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#transformations" target="_blank" rel="noopener noreferrer">Transformations</a>
+        Apply a thumbnail crop with rounded corners, as shown in <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#transformations" target="_blank" rel="noopener noreferrer">Transformations</a>
+        <div className="space"></div>
         <AdvancedImage cldImg={getTransformationsImage()} />  
 
+        <br/>
+
+        Specify the Cloudinary configuration when instantiating an asset, as shown in <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#asset_instance_configuration" target="_blank" rel="noopener noreferrer">Asset instance configuration</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getAssetInstanceImage()} />    
+
+        <br/>
+
+        Use all the plugins (lazyload, responsive, accessibility, placeholder), as shown in 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#plugins" target="_blank" rel="noopener noreferrer">Plugins</a>
-        <AdvancedImage cldImg={getAssetInstanceImage()} plugins={[lazyload(), responsive(), accessibility(), placeholder()]} />
+        <div className="space"></div>
+        <AdvancedImage cldImg={getPluginsImage()} plugins={[lazyload(), responsive(), accessibility(), placeholder()]} />
 
+        <br/>
+
+        Use the lazyload plugin to delay loading the image until it reaches the viewport, as shown in
         <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#lazy_loading" target="_blank" rel="noopener noreferrer">Lazy loading</a>
-        <AdvancedImage cldImg={getAssetInstanceImage()} plugins={[lazyload('10px 20px 10px 30px', 0.25)]}/>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getLazyloadImage()} plugins={[lazyload('10px 20px 10px 30px', 0.25)]}/>
 
+        <br/>
+
+        Use the responsive plugin to request the best size of image for the viewport, as shown in 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#responsive_images" target="_blank" rel="noopener noreferrer">Responsive images</a>
-        <AdvancedImage cldImg={getAssetInstanceImage()} plugins={[responsive([800, 1000, 1400])]} />
+        <div className="space"></div>
+        <AdvancedImage cldImg={getResponsiveImage()} plugins={[responsive([800, 1000, 1400])]} />
 
+        <br/>
+
+        Use the accessibility plugin to help color blind viewers, as shown in 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#image_accessibility" target="_blank" rel="noopener noreferrer">Image accessibility</a>
-       <AdvancedImage cldImg={getAssetInstanceImage()} plugins={[accessibility('colorblind')]}/>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getAccessibilityImage()} plugins={[accessibility('colorblind')]}/>
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#image_placeholders" target="_blank" rel="noopener noreferrer">Image placeholders</a>
-       <AdvancedImage cldImg={getAssetInstanceImage()} plugins={[placeholder('blur')]}/>
+        <br/>
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#example_2_combine_lazy_loading_with_a_placeholder" target="_blank" rel="noopener noreferrer">Lazy load and placeholder</a>
-       <AdvancedImage cldImg={getAssetInstanceImage()} plugins={[lazyload(), placeholder('predominant-color')]}/>
+        Use the placeholder plugin to show a blurred image while the image loads, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#image_placeholders" target="_blank" rel="noopener noreferrer">Image placeholders</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getPlaceholderImage()} plugins={[placeholder('blur')]}/>
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#syntax_overview" target="_blank" rel="noopener noreferrer">Syntax overview</a>
-       <AdvancedImage cldImg={getSyntaxOverviewImage()} />  
+        <br/>
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#specifying_the_delivery_type" target="_blank" rel="noopener noreferrer">Specifying the delivery type</a>
-       <AdvancedImage cldImg={getFetchImage()} />  
+        Combine the lazyload and placeholder plugins, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#example_2_combine_lazy_loading_with_a_placeholder" target="_blank" rel="noopener noreferrer">Lazy load and placeholder</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getLazyloadPlaceholderImage()} plugins={[lazyload(), placeholder('predominant-color')]}/>
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#transforming_your_image" target="_blank" rel="noopener noreferrer">Transforming your image</a>
-       <AdvancedImage cldImg={getTransformingYourImageImage()} />  
+        <br/>
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#chaining_transformations" target="_blank" rel="noopener noreferrer">Chaining transformations</a>
-       <AdvancedImage cldImg={getChainingTransformationsImage()} />  
+        Replace the most prominent color with light blue, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#syntax_overview" target="_blank" rel="noopener noreferrer">Syntax overview</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getSyntaxOverviewImage()} />  
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#resizing_and_cropping" target="_blank" rel="noopener noreferrer">Resizing and cropping</a>
-       <AdvancedImage cldImg={getResizingAndCroppingImage()} />  
+        <br/>
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#converting_to_another_image_format" target="_blank" rel="noopener noreferrer">Deliver a .jpg file in .gif format by changing the extension</a>
-       <AdvancedImage cldImg={getConvertingFormatExtensionImage()} />  
+        Use the fetch delivery type to deliver an image, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#specifying_the_delivery_type" target="_blank" rel="noopener noreferrer">Specifying the delivery type</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getFetchImage()} />  
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#converting_to_another_image_format" target="_blank" rel="noopener noreferrer">Deliver a .jpg file in .gif format by setting the delivery format</a>
-       <AdvancedImage cldImg={getConvertingFormatDeliveryImage()} />  
+        <br/>
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#converting_to_another_image_format" target="_blank" rel="noopener noreferrer">Using auto format</a>
-       <AdvancedImage cldImg={getAutoFormatImage()} />  
+        Scale an image to a width of 400 pixels, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#transforming_your_image" target="_blank" rel="noopener noreferrer">Transforming your image</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getTransformingYourImageImage()} />  
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#applying_image_effects_and_filters" target="_blank" rel="noopener noreferrer">Applying image effects and filters</a>
-       <AdvancedImage cldImg={getEffectsImage()} /> 
+        <br/>
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#adding_text_and_image_overlays" target="_blank" rel="noopener noreferrer">Adding text and image overlays</a>
-       <AdvancedImage cldImg={getOverlaysImage()} /> 
+        Chain several transformations together, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#chaining_transformations" target="_blank" rel="noopener noreferrer">Chaining transformations</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getChainingTransformationsImage()} />  
 
-       <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#image_optimizations" target="_blank" rel="noopener noreferrer">Image optimizations</a>
-       <AdvancedImage cldImg={getOptimizationsImage()} /> 
+        <br/>
+
+        Crop an image to keep the faces, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#resizing_and_cropping" target="_blank" rel="noopener noreferrer">Resizing and cropping</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getResizingAndCroppingImage()} />  
+
+        <br/>
+
+        Deliver a .jpg file in .gif format by changing the extension, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#converting_format_example1a" target="_blank" rel="noopener noreferrer">Converting to another image format</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getConvertingFormatExtensionImage()} />  
+
+        <br/>
+
+        Deliver a .jpg file in .gif format by setting the delivery format, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#converting_format_example1b" target="_blank" rel="noopener noreferrer">Converting to another image format</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getConvertingFormatDeliveryImage()} />  
+
+        <br/>
+
+        Use auto format to deliver a file in the best format for the end device, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#converting_format_example2" target="_blank" rel="noopener noreferrer">Converting to another image format</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getAutoFormatImage()} />  
+
+        <br/>
+
+        Apply various transformations, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#applying_image_effects_and_filters" target="_blank" rel="noopener noreferrer">Applying image effects and filters</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getEffectsImage()} /> 
+
+        <br/>
+
+        Add text and image overlays to an image, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#adding_text_and_image_overlays" target="_blank" rel="noopener noreferrer">Adding text and image overlays</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getOverlaysImage()} /> 
+
+        <br/>
+
+        Apply automatic format and quality, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#image_optimizations" target="_blank" rel="noopener noreferrer">Image optimizations</a>
+        <div className="space"></div>
+        <AdvancedImage cldImg={getOptimizationsImage()} /> 
   
       </header>
     </div>

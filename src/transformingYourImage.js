@@ -11,7 +11,8 @@ export function getTransformingYourImageImage() {
     }
   });
 
-  const myImage = cld.image('sample'); 
+  // Use the image with public ID, 'bike'.
+  const myImage = cld.image('bike'); 
 
   // Scale the image to a width of 400 pixels.
   myImage.resize(scale().width(400));
