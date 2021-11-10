@@ -4,6 +4,8 @@ import {Cloudinary} from "@cloudinary/url-gen";
 // Import required actions.
 import {thumbnail} from "@cloudinary/url-gen/actions/resize";
 import {byRadius} from "@cloudinary/url-gen/actions/roundCorners";
+import {focusOn} from "@cloudinary/url-gen/qualifiers/gravity";
+import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
 
 export function getTransformationsImage() {
 
@@ -19,7 +21,7 @@ export function getTransformationsImage() {
 
   // Apply the transformation.
   myImage
-  .resize(thumbnail().width(150).height(150).gravity('face'))  // Crop the image, focusing on the face.
+  .resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face())))  // Crop the image, focusing on the face.
   .roundCorners(byRadius(20));    // Round the corners.
 
   return myImage;

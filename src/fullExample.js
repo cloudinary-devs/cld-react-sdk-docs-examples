@@ -13,6 +13,8 @@ import {byAngle} from "@cloudinary/url-gen/actions/rotate"
 import {image} from "@cloudinary/url-gen/qualifiers/source";
 import {Position} from "@cloudinary/url-gen/qualifiers/position";
 import {compass} from "@cloudinary/url-gen/qualifiers/gravity";
+import {focusOn} from "@cloudinary/url-gen/qualifiers/gravity";
+import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
 
 export function getFullExampleImage() {
   
@@ -28,7 +30,7 @@ export function getFullExampleImage() {
 
   // Apply the transformation.
   myImage
-  .resize(thumbnail().width(150).height(150).gravity('face'))  // Crop the image.
+  .resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face())))  // Crop the image.
   .roundCorners(byRadius(20))    // Round the corners.
   .effect(sepia())  // Apply a sepia effect.
   .overlay(   // Overlay the Cloudinary logo.

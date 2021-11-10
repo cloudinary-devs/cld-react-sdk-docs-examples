@@ -10,6 +10,8 @@ import {Position} from "@cloudinary/url-gen/qualifiers/position";
 import {compass} from "@cloudinary/url-gen/qualifiers/gravity";
 import {image, text} from "@cloudinary/url-gen/qualifiers/source";
 import {TextStyle} from "@cloudinary/url-gen/qualifiers/textStyle";
+import {focusOn} from "@cloudinary/url-gen/qualifiers/gravity";
+import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
 
 export function getOverlaysImage() {
 
@@ -30,7 +32,7 @@ myImage
     source(
       image('nice_couple')
           .transformation(new Transformation()
-          .resize(crop().width(1.3).height(1.3).gravity('faces').regionRelative())
+          .resize(crop().width(1.3).height(1.3).gravity(focusOn(FocusOn.faces())).regionRelative())
           .adjust(saturation(50))
           .effect(vignette())
           .resize(scale().width(100))

@@ -1,5 +1,7 @@
 import {Cloudinary} from "@cloudinary/url-gen";
 import {fill} from "@cloudinary/url-gen/actions/resize";
+import {focusOn} from "@cloudinary/url-gen/qualifiers/gravity";
+import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
 
 export function getResizingAndCroppingImage() {
 
@@ -14,7 +16,7 @@ export function getResizingAndCroppingImage() {
     const myImage = cld.image('family_bench');
 
     // Apply the transformation.
-    myImage.resize(fill().width(250).height(250).gravity('faces'));
+    myImage.resize(fill().width(250).height(250).gravity(focusOn(FocusOn.faces())));
 
     return myImage;
 }
