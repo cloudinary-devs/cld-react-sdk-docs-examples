@@ -52,7 +52,7 @@ function App() {
 
         <br/>
 
-        Apply a thumbnail crop with rounded corners, as shown in <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#transformations" target="_blank" rel="noopener noreferrer">Transformations</a>
+        Apply a thumbnail crop with rounded corners, as shown in <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#image_transformations_with_react" target="_blank" rel="noopener noreferrer">Image transformations with React</a>
         <div className="space"></div>
         <AdvancedImage cldImg={getTransformationsImage()} />  
 
@@ -65,42 +65,42 @@ function App() {
         <br/>
 
         Use all the plugins (lazyload, responsive, accessibility, placeholder), as shown in 
-        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#plugins" target="_blank" rel="noopener noreferrer">Plugins</a>
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#plugins" target="_blank" rel="noopener noreferrer">Plugins</a>
         <div className="space"></div>
         <AdvancedImage cldImg={getPluginsImage()} plugins={[lazyload(), responsive(), accessibility(), placeholder()]} />
 
         <br/>
 
         Use the lazyload plugin to delay loading the image until it reaches the viewport, as shown in
-        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#lazy_loading" target="_blank" rel="noopener noreferrer">Lazy loading</a>
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#lazy_loading" target="_blank" rel="noopener noreferrer">Lazy loading</a>
         <div className="space"></div>
         <AdvancedImage cldImg={getLazyloadImage()} plugins={[lazyload('10px 20px 10px 30px', 0.25)]}/>
 
         <br/>
 
         Use the responsive plugin to request the best size of image for the viewport, as shown in 
-        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#responsive_images" target="_blank" rel="noopener noreferrer">Responsive images</a>
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#responsive_images" target="_blank" rel="noopener noreferrer">Responsive images</a>
         <div className="space"></div>
         <AdvancedImage cldImg={getResponsiveImage()} plugins={[responsive([800, 1000, 1400])]} />
 
         <br/>
 
         Use the accessibility plugin to help color blind viewers, as shown in 
-        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#image_accessibility" target="_blank" rel="noopener noreferrer">Image accessibility</a>
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#image_accessibility" target="_blank" rel="noopener noreferrer">Image accessibility</a>
         <div className="space"></div>
         <AdvancedImage cldImg={getAccessibilityImage()} plugins={[accessibility('colorblind')]}/>
 
         <br/>
 
         Use the placeholder plugin to show a blurred image while the image loads, as shown in 
-        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#image_placeholders" target="_blank" rel="noopener noreferrer">Image placeholders</a>
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#image_placeholders" target="_blank" rel="noopener noreferrer">Image placeholders</a>
         <div className="space"></div>
         <AdvancedImage cldImg={getPlaceholderImage()} plugins={[placeholder('blur')]}/>
 
         <br/>
 
         Combine the lazyload and placeholder plugins, as shown in 
-        <a className="App-link" href="https://cloudinary.com/documentation/react2_integration#example_2_combine_lazy_loading_with_a_placeholder" target="_blank" rel="noopener noreferrer">Lazy load and placeholder</a>
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#example_2_combine_lazy_loading_with_a_placeholder" target="_blank" rel="noopener noreferrer">Lazy load and placeholder</a>
         <div className="space"></div>
         <AdvancedImage cldImg={getLazyloadPlaceholderImage()} plugins={[lazyload(), placeholder('predominant-color')]}/>
 
