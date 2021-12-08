@@ -26,6 +26,10 @@ import {getLazyloadPlaceholderImage} from './lazyloadPlaceholder';
 import {getTransformingYourVideoVideo} from './transformingYourVideo';
 import {getExample1Video} from './videoExample1';
 import {getExample2Video} from './videoExample2';
+import {getVideoTransformationsWithReactVideo} from './videoTransformationsWithReact';
+
+import { videoCodec } from "@cloudinary/url-gen/actions/transcode";
+import { auto, vp9 } from '@cloudinary/url-gen/qualifiers/videoCodec';
 
 function App() {
 
@@ -38,6 +42,18 @@ function App() {
   // in this app we call a function to return myImage, for example:
 
   // <AdvancedImage cldImg={getQuickstartImage()} />
+
+  const sources = [
+    {
+      type: 'mp4',
+      codecs: ['avc1.4d002a'],
+      transcode: videoCodec(auto())
+    },
+    {
+      type: 'webm',
+      codecs: ['vp8', 'vorbis'],
+      transcode: videoCodec(vp9())
+    }];
 
 
   return (
@@ -186,10 +202,24 @@ function App() {
 
         <br/>
 
+        Focus on faces in a video, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#video_transformations_with_react" target="_blank" rel="noopener noreferrer">Video transformations with React</a>
+        <div className="space"></div>
+        <AdvancedVideo cldVid={getVideoTransformationsWithReactVideo()} id="zero" controls autoPlay loop/> 
+
+        <br/>
+
+        Use various properties, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#advancedvideo_properties" target="_blank" rel="noopener noreferrer">AdvancedVideo properties</a>
+        <div className="space"></div>
+        <AdvancedVideo cldVid={getVideoTransformationsWithReactVideo()} id="one" controls sources={sources} playsInline onPlay={getVideoTransformationsWithReactVideo} plugins={[lazyload()]}/> 
+
+        <br/>
+
         Resize a video to a width of 400 pixels, as shown in 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#transforming_your_video" target="_blank" rel="noopener noreferrer">Transforming your video</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getTransformingYourVideoVideo()} id="one" controls autoPlay loop /> 
+        <AdvancedVideo cldVid={getTransformingYourVideoVideo()} id="two" controls autoPlay loop /> 
 
         <br/>
 
@@ -197,7 +227,7 @@ function App() {
 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#example_1" target="_blank" rel="noopener noreferrer">Example 1</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getExample1Video()} id="two" controls autoPlay loop />    
+        <AdvancedVideo cldVid={getExample1Video()} id="three" controls autoPlay loop />    
 
 
         <br/>
@@ -206,7 +236,7 @@ function App() {
 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#example_2" target="_blank" rel="noopener noreferrer">Example 2</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getExample2Video()} id="three" controls autoPlay loop muted/>  
+        <AdvancedVideo cldVid={getExample2Video()} id="four" controls autoPlay loop muted/>  
 
       </header>
     </div>
