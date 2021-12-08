@@ -1,7 +1,7 @@
 
 import './App.css';
 import React from 'react'
-import {AdvancedImage, lazyload, accessibility, responsive, placeholder} from '@cloudinary/react';
+import {AdvancedImage, lazyload, accessibility, responsive, placeholder, AdvancedVideo} from '@cloudinary/react';
 import {getQuickstartImage} from './quickstart';
 import {getFullExampleImage} from './fullExample';
 import {getAssetInstanceImage} from './assetInstance';
@@ -23,6 +23,9 @@ import {getResponsiveImage} from './responsive';
 import {getAccessibilityImage} from './accessibility';
 import {getPlaceholderImage} from './placeholder';
 import {getLazyloadPlaceholderImage} from './lazyloadPlaceholder';
+import {getTransformingYourVideoVideo} from './transformingYourVideo';
+import {getExample1Video} from './videoExample1';
+import {getExample2Video} from './videoExample2';
 
 function App() {
 
@@ -180,7 +183,31 @@ function App() {
         <a className="App-link" href="https://cloudinary.com/documentation/react2_image_transformations#image_optimizations" target="_blank" rel="noopener noreferrer">Image optimizations</a>
         <div className="space"></div>
         <AdvancedImage cldImg={getOptimizationsImage()} /> 
-  
+
+        <br/>
+
+        Resize a video to a width of 400 pixels, as shown in 
+        <a className="App-link" href="https://cloudinary.com/documentation/javascript_video_transformations#transforming_your_video" target="_blank" rel="noopener noreferrer">Transforming your video</a>
+        <div className="space"></div>
+        <AdvancedVideo cldVid={getTransformingYourVideoVideo()} id="resize" controls autoPlay loop /> 
+
+        <br/>
+
+        Apply several transformations to the elephant video, as shown in 
+
+        <a className="App-link" href="https://cloudinary.com/documentation/javascript_video_transformations#example_1" target="_blank" rel="noopener noreferrer">Example 1</a>
+        <div className="space"></div>
+        <AdvancedVideo cldVid={getExample1Video()} id="example1" controls autoPlay loop />   
+
+
+        <br/>
+
+        Apply several transformations to the skiing video, as shown in 
+
+        <a className="App-link" href="https://cloudinary.com/documentation/javascript_video_transformations#example_2" target="_blank" rel="noopener noreferrer">Example 2</a>
+        <div className="space"></div>
+        <AdvancedVideo cldVid={getExample2Video()} id="example2" controls autoPlay loop muted/> 
+
       </header>
     </div>
   );
