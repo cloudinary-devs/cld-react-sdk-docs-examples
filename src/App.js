@@ -187,26 +187,26 @@ function App() {
         <br/>
 
         Resize a video to a width of 400 pixels, as shown in 
-        <a className="App-link" href="https://cloudinary.com/documentation/javascript_video_transformations#transforming_your_video" target="_blank" rel="noopener noreferrer">Transforming your video</a>
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#transforming_your_video" target="_blank" rel="noopener noreferrer">Transforming your video</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getTransformingYourVideoVideo()} id="resize" controls autoPlay loop /> 
+        <AdvancedVideo cldVid={getTransformingYourVideoVideo()} id="one" controls autoPlay loop /> 
 
         <br/>
 
         Apply several transformations to the elephant video, as shown in 
 
-        <a className="App-link" href="https://cloudinary.com/documentation/javascript_video_transformations#example_1" target="_blank" rel="noopener noreferrer">Example 1</a>
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#example_1" target="_blank" rel="noopener noreferrer">Example 1</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getExample1Video()} id="example1" controls autoPlay loop />   
+        <AdvancedVideo cldVid={getExample1Video()} id="two" controls autoPlay loop />    
 
 
         <br/>
 
         Apply several transformations to the skiing video, as shown in 
 
-        <a className="App-link" href="https://cloudinary.com/documentation/javascript_video_transformations#example_2" target="_blank" rel="noopener noreferrer">Example 2</a>
+        <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#example_2" target="_blank" rel="noopener noreferrer">Example 2</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getExample2Video()} id="example2" controls autoPlay loop muted/> 
+        <AdvancedVideo cldVid={getExample2Video()} id="three" controls autoPlay loop muted/>  
 
       </header>
     </div>
