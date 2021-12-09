@@ -32,6 +32,10 @@ import {getAdvancedVideoPropertiesVideo} from './advancedVideoProperties';
 import { videoCodec } from "@cloudinary/url-gen/actions/transcode";
 import { auto, vp9 } from '@cloudinary/url-gen/qualifiers/videoCodec';
 
+function playFunction() {
+  // Dummy function
+}
+
 function App() {
 
   // This app has been structured to ensure that each example is self-contained, to show exactly what needs to be imported in each case. 
@@ -213,7 +217,7 @@ function App() {
         Use various properties, as shown in 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#advancedvideo_properties" target="_blank" rel="noopener noreferrer">AdvancedVideo properties</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getAdvancedVideoPropertiesVideo()} id="one" controls sources={sources} playsInline muted onPlay={getAdvancedVideoPropertiesVideo()} plugins={[lazyload()]}/> 
+        <AdvancedVideo cldVid={getAdvancedVideoPropertiesVideo()} id="one" controls sources={sources} playsInline muted onPlay={playFunction()} plugins={[lazyload()]}/> 
 
         <br/>
 
