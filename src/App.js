@@ -27,6 +27,7 @@ import {getTransformingYourVideoVideo} from './transformingYourVideo';
 import {getExample1Video} from './videoExample1';
 import {getExample2Video} from './videoExample2';
 import {getVideoTransformationsWithReactVideo} from './videoTransformationsWithReact';
+import {getAdvancedVideoPropertiesVideo} from './advancedVideoProperties';
 
 import { videoCodec } from "@cloudinary/url-gen/actions/transcode";
 import { auto, vp9 } from '@cloudinary/url-gen/qualifiers/videoCodec';
@@ -212,7 +213,7 @@ function App() {
         Use various properties, as shown in 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#advancedvideo_properties" target="_blank" rel="noopener noreferrer">AdvancedVideo properties</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getVideoTransformationsWithReactVideo()} id="one" controls sources={sources} playsInline onPlay={getVideoTransformationsWithReactVideo} plugins={[lazyload()]}/> 
+        <AdvancedVideo cldVid={getAdvancedVideoPropertiesVideo()} id="one" controls sources={sources} playsInline muted onPlay={getAdvancedVideoPropertiesVideo()} plugins={[lazyload()]}/> 
 
         <br/>
 
