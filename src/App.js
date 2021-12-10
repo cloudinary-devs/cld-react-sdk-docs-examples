@@ -210,7 +210,7 @@ function App() {
         Focus on faces in a video, as shown in 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#video_transformations_with_react" target="_blank" rel="noopener noreferrer">Video transformations with React</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getVideoTransformationsWithReactVideo()} id="zero" controls autoPlay loop/> 
+        <AdvancedVideo cldVid={getVideoTransformationsWithReactVideo()} id="zero" controls autoPlay loop muted/> 
 
         <br/>
 
@@ -224,7 +224,7 @@ function App() {
         Resize a video to a width of 400 pixels, as shown in 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#transforming_your_video" target="_blank" rel="noopener noreferrer">Transforming your video</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getTransformingYourVideoVideo()} id="two" controls autoPlay loop /> 
+        <AdvancedVideo cldVid={getTransformingYourVideoVideo()} id="two" controls autoPlay loop muted/> 
 
         <br/>
 
@@ -232,7 +232,7 @@ function App() {
 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#example_1" target="_blank" rel="noopener noreferrer">Example 1</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getExample1Video()} id="three" controls autoPlay loop />    
+        <AdvancedVideo cldVid={getExample1Video()} id="three" controls autoPlay loop muted/>    
 
 
         <br/>
