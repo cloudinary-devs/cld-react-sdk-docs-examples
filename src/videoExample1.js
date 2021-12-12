@@ -14,6 +14,9 @@ export function getExample1Video() {
   const cld = new Cloudinary({
     cloud: {
       cloudName: 'demo'
+    },
+    url: {
+      analytics: false
     }
   });
 

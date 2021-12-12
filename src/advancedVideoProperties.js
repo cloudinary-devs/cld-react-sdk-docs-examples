@@ -6,6 +6,9 @@ export function getAdvancedVideoPropertiesVideo() {
   const cld = new Cloudinary({
     cloud: {
       cloudName: 'demo'
+    },
+    url: {
+      analytics: false
     }
   });
 

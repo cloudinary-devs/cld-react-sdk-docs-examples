@@ -237,7 +237,7 @@ function App() {
 
         <br/>
 
-        Apply several transformations to the skiing video, as shown in 
+        Apply several transformations to the snowboarding video, as shown in 
 
         <a className="App-link" href="https://cloudinary.com/documentation/react2_video_transformations#example_2" target="_blank" rel="noopener noreferrer">Example 2</a>
         <div className="space"></div>
