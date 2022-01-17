@@ -1,6 +1,6 @@
 // Import the configuration classes.
-import URLConfig from "@cloudinary/url-gen/config/URLConfig";
-import CloudConfig from "@cloudinary/url-gen/config/CloudConfig";
+import {URLConfig} from "@cloudinary/url-gen";
+import {CloudConfig} from "@cloudinary/url-gen";
 import {CloudinaryImage} from '@cloudinary/url-gen';
 
 export function getAssetInstanceImage() {
