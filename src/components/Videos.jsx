@@ -41,8 +41,8 @@ function Videos() {
 
   return (
     <div className="App-body">
-      <h1 class="font-weight-light">Video Transformations</h1>
-      <p>
+      <h1 className="font-weight-light">Video Transformations</h1>
+
       Focus on faces in a video, as shown in 
         <br/><a className="App-link" href="https://cloudinary.com/documentation/react_video_transformations#video_transformations_with_react" target="_blank" rel="noopener noreferrer">Video transformations with React</a>
         <div className="space"></div>
@@ -81,7 +81,6 @@ function Videos() {
 
         <br/>
 
-      </p>
     </div>
   );
 }
