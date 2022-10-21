@@ -39,7 +39,7 @@ function Images() {
     <div className="App-body">
       <h1 className="font-weight-light">Image Transformations</h1>
 
-      Crop an image to a square, as shown in the <br/><a className="App-link" href="https://cloudinary.com/documentation/react_quick_start#2_add_cloudinary_to_your_code" target="_blank" rel="noopener noreferrer">Quick start guide</a>
+      Crop an image to a square, as shown in the <br/><a className="App-link" href="https://cloudinary.com/documentation/react_quick_start" target="_blank" rel="noopener noreferrer">Quick start guide</a>
       <div className="space"></div>
       <AdvancedImage cldImg={getQuickstartImage()} />
 
