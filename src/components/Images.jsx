@@ -10,6 +10,7 @@ import {getFetchImage} from '../deliveryType';
 import {getTransformingYourImageImage} from '../transformingYourImage';
 import {getChainingTransformationsImage} from '../chainingTransformations';
 import {getResizingAndCroppingImage} from '../resizingAndCropping';
+import { getAutoGravityImage } from "../autoGravity";
 import {getConvertingFormatExtensionImage} from '../convertingFormatExtension';
 import {getConvertingFormatDeliveryImage} from '../convertingFormatDelivery';
 import {getAutoFormatImage} from '../autoFormat';
@@ -137,6 +138,13 @@ function Images() {
       <br/><a className="App-link" href="https://cloudinary.com/documentation/react_image_transformations#resizing_and_cropping" target="_blank" rel="noopener noreferrer">Resizing and cropping</a>
       <div className="space"></div>
       <AdvancedImage cldImg={getResizingAndCroppingImage()} />  
+
+      <br/>
+
+      Crop an image to keep the most interesting part, as shown in 
+      <br/><a className="App-link" href="https://cloudinary.com/documentation/react_image_transformations#resizing_and_cropping" target="_blank" rel="noopener noreferrer">Resizing and cropping</a>
+      <div className="space"></div>
+      <AdvancedImage cldImg={getAutoGravityImage()} />  
 
       <br/>
 
