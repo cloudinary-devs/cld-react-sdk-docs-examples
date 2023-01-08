@@ -12,7 +12,7 @@ export function getAdvancedVideoPropertiesVideo() {
     }
   });
 
-  // Use the video with public ID, 'docs/walking_talking'.
+  // Use the video with public ID, 'dog'.
   const myVideo = cld.video('dog');
 
   return myVideo;
