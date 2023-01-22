@@ -46,21 +46,37 @@ function Videos() {
       Focus on faces in a video, as shown in 
         <br/><a className="App-link" href="https://cloudinary.com/documentation/react_video_transformations#video_transformations_with_react" target="_blank" rel="noopener noreferrer">Video transformations with React</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getVideoTransformationsWithReactVideo()} id="zero" controls autoPlay loop muted/> 
+        <AdvancedVideo cldVid={getVideoTransformationsWithReactVideo()} controls autoPlay loop muted/> 
 
         <br/>
 
         Use various properties, as shown in 
         <br/><a className="App-link" href="https://cloudinary.com/documentation/react_video_transformations#advancedvideo_properties" target="_blank" rel="noopener noreferrer">AdvancedVideo properties</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getAdvancedVideoPropertiesVideo()} id="one" controls sources={sources} playsInline muted onPlay={playFunction()} plugins={[lazyload()]}/> 
+        <AdvancedVideo cldVid={getAdvancedVideoPropertiesVideo()} controls sources={sources} playsInline muted onPlay={playFunction()} plugins={[lazyload()]}/> 
+
+        <br/>
+
+        Set the cldPoster property to the center frame of the video, as shown in 
+
+        <br/><a className="App-link" href="https://cloudinary.com/documentation/react_video_transformations#the_cldposter_property" target="_blank" rel="noopener noreferrer">The cldPoster property</a>
+        <div className="space"></div>
+        <AdvancedVideo cldVid={getVideoTransformationsWithReactVideo()} controls muted cldPoster={getVideoTransformationsWithReactVideo().format('jpg')}/>    
+
+        <br/>
+
+        Set the cldPoster property to auto, as shown in 
+
+        <br/><a className="App-link" href="https://cloudinary.com/documentation/react_video_transformations#the_cldposter_property" target="_blank" rel="noopener noreferrer">The cldPoster property</a>
+        <div className="space"></div>
+        <AdvancedVideo cldVid={getVideoTransformationsWithReactVideo()} controls muted cldPoster="auto"/>    
 
         <br/>
 
         Resize a video to a width of 400 pixels, as shown in 
         <br/><a className="App-link" href="https://cloudinary.com/documentation/react_video_transformations#transforming_your_video" target="_blank" rel="noopener noreferrer">Transforming your video</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getTransformingYourVideoVideo()} id="two" controls autoPlay loop muted/> 
+        <AdvancedVideo cldVid={getTransformingYourVideoVideo()} controls autoPlay loop muted/> 
 
         <br/>
 
@@ -68,7 +84,7 @@ function Videos() {
 
         <br/><a className="App-link" href="https://cloudinary.com/documentation/react_video_transformations#example_1" target="_blank" rel="noopener noreferrer">Example 1</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getExample1Video()} id="three" controls autoPlay loop muted/>    
+        <AdvancedVideo cldVid={getExample1Video()} controls autoPlay loop muted/>    
 
 
         <br/>
@@ -77,7 +93,7 @@ function Videos() {
 
         <br/><a className="App-link" href="https://cloudinary.com/documentation/react_video_transformations#example_2" target="_blank" rel="noopener noreferrer">Example 2</a>
         <div className="space"></div>
-        <AdvancedVideo cldVid={getExample2Video()} id="four" controls autoPlay loop muted/> 
+        <AdvancedVideo cldVid={getExample2Video()} controls autoPlay loop muted/> 
 
         <br/>
 
