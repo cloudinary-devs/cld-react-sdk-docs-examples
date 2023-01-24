@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.15.8",
-    "@cloudinary/react": "1.0.1",
-    "@cloudinary/url-gen": "1.5.0",
+    "@cloudinary/react": "1.9.0",
+    "@cloudinary/url-gen": "1.8.7",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
