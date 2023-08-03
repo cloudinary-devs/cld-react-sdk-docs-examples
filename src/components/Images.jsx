@@ -3,6 +3,7 @@ import '../App.css';
 import {AdvancedImage, lazyload, accessibility, responsive, placeholder} from '@cloudinary/react';
 import {getQuickstartImage} from '../quickstart';
 import {getFullExampleImage} from '../fullExample';
+import {getQuickExampleImage} from '../quickExample';
 import {getAssetInstanceImage} from '../assetInstance';
 import {getTransformationsImage} from '../transformations';
 import {getSyntaxOverviewImage} from '../syntaxOverview';
@@ -43,6 +44,12 @@ function Images() {
       Crop an image to a square, as shown in the <br/><a className="App-link" href="https://cloudinary.com/documentation/react_quick_start" target="_blank" rel="noopener noreferrer">Quick start guide</a>
       <div className="space"></div>
       <AdvancedImage cldImg={getQuickstartImage()} />
+
+      <br/>
+
+      Apply a sepia effect, as shown in the <br/><a className="App-link" href="https://cloudinary.com/documentation/react_integration#quick_example" target="_blank" rel="noopener noreferrer">Quick example</a>
+      <div className="space"></div>
+      <AdvancedImage cldImg={getQuickExampleImage()} />
 
       <br/>
 
