@@ -1,4 +1,4 @@
-# React Image and Video Transoformations
+# React Image and Video Transformations
 React examples for the [Cloudinary React SDK docs](https://cloudinary.com/documentation/react_integration).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
